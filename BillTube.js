@@ -114,8 +114,6 @@ window[CHANNEL.name].sequencerLoader = function() {
 };
 window[CHANNEL.name].sequencerLoader()
 $('head').append("<link rel='stylesheet' href='//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css' />");
-//$('head').append("<link rel='stylesheet' href='//cdn.jsdelivr.net/alertifyjs/1.5.0/css/alertify.min.css' />");
-//$('head').append("<link rel='stylesheet' href='//cdn.jsdelivr.net/alertifyjs/1.5.0/css/themes/default.min.css' />");
 $("#controlsrow").after($("#motdrow"));
 $("#controlsrow").after($("#announcements"));
 $(".container-fluid").append($("#footer"));
@@ -164,9 +162,6 @@ $("#fullscreenbtn").text("");
 $("#emotelistbtn").text("");
 $("#chatheader").append("<button id='fullvid' class='btn-default fa fa-arrows-v'></button>");
 $("#chatheader").append("<button id='notif' class='btn-default fa fa-bell-o'></button>");
-//$("#chatheader").append("<button id='FS' class='btn-default fa fa-arrows-alt'></button>");
-//$("#fullscreenbtn").addClass("hidden");
-
 $("#modflair").removeClass("label pull-right pointer label-default");
 $("#adminflair").removeClass("label pull-right pointer label-default");
 $("#modflair").addClass("btn-default");
@@ -178,8 +173,6 @@ $("#notif").after($("#fullscreenbtn"));
 $("#userlisttoggle").after($("#emotelistbtn"));
 $("#modflair").addClass("btn-default");
 $("#chat-controls").addClass("hidden");
-//$("#ytapiplayer").removeClass("vjs-default-skin");
-//$("#ytapiplayer").addClass("vjs-sublime-skin");
 $("#chatwrap").append("<div id='control' class='cont'>");
 $("#movielist").load('//dl.dropbox.com/s/x74wz4iubr4kr2k/motd.html');
 $(".vjs-error-display").append("<div>The Video didn't load correctly, refresh the player with the button on top or refresh the page.</div>");
@@ -263,14 +256,6 @@ Callbacks.playlist = function(data) { //currently for debugging purposes only. D
 }
 
 function requeue(data) {
-    /*for (var i = 0; i <= data.length - 1; i++) {//find information of current video in playlist
-    	var e = data[i];
-    	if (e.media.id == currentmedia.id) {
-    		currentmedia.uid = e.uid;
-    		currentmedia.ispermanent = e.temp;
-    		currentmedia.location = i;
-    	}
-    }*/
     var _playlist = [];
     $("#queue > .queue_entry").each(function() {
         var data = $(this).data();
